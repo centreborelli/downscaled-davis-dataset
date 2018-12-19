@@ -14,7 +14,7 @@ do
 
 	for im in $(ls $dataset_folder/$seq/*.jpg)
 	do
-		echo "$BLUR -s g $f $im | $DOWNSA f $r - $(dirname $im)/$(basename $im jpg)png"
+		echo "$BLUR -s g $f $im | $DOWNSA f $r - $(dirname $im)/$(basename $im jpg)png && rm $im"
 	done
 done
 
